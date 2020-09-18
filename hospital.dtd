@@ -1,0 +1,29 @@
+<!ELEMENT hospitalList (patient+, doctor+, medicine+)>
+<!ELEMENT patient (medicalNumber, firstName, lastName, medication_list, doctor_list)>
+<!ELEMENT medicalNumber (#PCDATA)>
+<!ELEMENT firstName (#PCDATA)>
+<!ELEMENT lastName (#PCDATA)>
+<!ELEMENT medication_list (medicines+)>
+<!ELEMENT medicines (#PCDATA)>
+<!ELEMENT doctor_list (doctors+)>
+<!ELEMENT doctors (#PCDATA)>
+
+
+<!ATTLIST patient gender CDATA #REQUIRED>
+<!ATTLIST doctors IDREF CDATA #REQUIRED> <!-- CDATA WAS idref-->
+<!ATTLIST medicines IDREF CDATA #REQUIRED>
+
+<!ELEMENT doctor (doctorRegisterNumber, DfirstName, DlastName, specialisation)>
+<!ELEMENT doctorRegisterNumber (#PCDATA)>
+<!ELEMENT DfirstName (#PCDATA)>
+<!ELEMENT DlastName (#PCDATA)>
+<!ELEMENT specialisation (#PCDATA)>
+
+<!ATTLIST doctor ID CDATA #REQUIRED> 
+
+<!ELEMENT medicine (medicineName, company, registrationNumber)>
+<!ELEMENT medicineName (#PCDATA)>
+<!ELEMENT company (#PCDATA)>
+<!ELEMENT registrationNumber (#PCDATA)>
+
+<!ATTLIST medicine ID CDATA #REQUIRED> <!-- CDATA WAS ID-->

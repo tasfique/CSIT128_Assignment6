@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="hospital.xsl"?>
+	
+<!--<!DOCTYPE hospitalList SYSTEM "hospital.dtd">-->
+<hospitalList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:/C:/Users/Tasfi/OneDrive%20-%20University%20of%20Wollongong/UOW/UOW/Semester%202/CSIT128_INTRODUCTION_TO_WEB_TECHNOLOGY/Assignment/6/hospital.xsd">
+<!--<hospitalList>-->
+	
+	<patient gender="M">
+		<medicalNumber>827398323</medicalNumber>
+		<firstName>Pohn</firstName>
+		<lastName>Ton</lastName>
+		<medication_list>
+			<medicines IDREF="M1"/>
+			<medicines IDREF="M2"/>
+		</medication_list>
+		<doctor_list>
+			<doctors IDREF="D1"/>
+		</doctor_list>
+		
+	</patient>
+
+	<patient gender="M">
+		<medicalNumber>234324234</medicalNumber>
+		<firstName>John</firstName>
+		<lastName>Ron</lastName>
+		<medication_list>
+			<medicines IDREF="M2"/>
+		</medication_list>
+		<doctor_list>
+			<doctors IDREF="D1"/>
+			<doctors IDREF="D2"/>
+		</doctor_list>		
+	</patient>
+
+	<patient gender="F">
+		<medicalNumber>823432423</medicalNumber>
+		<firstName>Fohn</firstName>
+		<lastName>Lon</lastName>
+		<medication_list>
+			<medicines IDREF="M3"/>
+		</medication_list>
+		<doctor_list>
+			<doctors IDREF="D3"/>
+		</doctor_list>
+	</patient>
+
+	<doctor ID="D1">
+		<doctorRegisterNumber>0982130912</doctorRegisterNumber>
+		<DfirstName>Ivan</DfirstName>
+		<DlastName>Lason</DlastName>
+		<specialisation>&quot;Heart Surgeon&quot;</specialisation>
+	</doctor>
+
+	<doctor ID="D2">
+		<doctorRegisterNumber>346543534</doctorRegisterNumber>
+		<DfirstName>Digen</DfirstName>
+		<DlastName>Kason</DlastName>
+		<specialisation>&quot;Kidney Surgeon&quot;</specialisation>
+	</doctor>
+
+	<doctor ID="D3">
+		<doctorRegisterNumber>2342343234</doctorRegisterNumber>
+		<DfirstName>Hijas</DfirstName>
+		<DlastName>Dason</DlastName>
+		<specialisation>&quot;Brain Surgeon&quot;</specialisation>
+	</doctor>
+
+
+	<medicine ID="M1">
+
+		<medicineName>Paracetamol</medicineName>
+		<company>Kali</company>
+		<registrationNumber>34323123123</registrationNumber>
+
+	</medicine>
+
+	<medicine ID="M2">
+
+		<medicineName>Fexo</medicineName>
+		<company>Linux</company>
+		<registrationNumber>23113123232</registrationNumber>
+
+	</medicine>
+
+	<medicine ID="M3">
+
+		<medicineName>Linux</medicineName>
+		<company>Lason</company>
+		<registrationNumber>0921739349843</registrationNumber>
+
+	</medicine>
+
+</hospitalList>

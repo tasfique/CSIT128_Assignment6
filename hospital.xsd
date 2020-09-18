@@ -1,0 +1,77 @@
+<?xml version ="1.0" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="hospitalList">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="patient" minOccurs="1" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="medicalNumber" type="xsd:integer"/>
+							<xsd:element name="firstName" type="xsd:string"/>
+							<xsd:element name="lastName" type="xsd:string"/>
+							
+							<xsd:element name="medication_list">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="medicines" minOccurs="1" maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:attribute name="IDREF" type="xsd:string"/>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							
+							<xsd:element name="doctor_list">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="doctors" minOccurs="1" maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:attribute name="IDREF" type="xsd:string"/>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+						
+						<xsd:attribute name="gender" type="xsd:string" />
+						
+					</xsd:complexType>
+				</xsd:element>
+			
+				<xsd:element name="doctor" minOccurs="1" maxOccurs="unbounded">
+					
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="doctorRegisterNumber" type="xsd:integer"/>
+							<xsd:element name="DfirstName" type="xsd:string"/>
+							<xsd:element name="DlastName" type="xsd:string"/>
+							<xsd:element name="specialisation" type="xsd:string"/>
+						</xsd:sequence>
+						
+						<xsd:attribute name="ID" type="xsd:string" />
+					</xsd:complexType>
+					
+				</xsd:element>
+				
+					<xsd:element name="medicine" minOccurs="1" maxOccurs="unbounded">
+					
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="medicineName" type="xsd:string"/>
+							<xsd:element name="company" type="xsd:string"/>
+							<xsd:element name="registrationNumber" type="xsd:string"/>
+						</xsd:sequence>
+						
+						<xsd:attribute name="ID" type="xsd:string" />
+						
+					</xsd:complexType>
+					
+				</xsd:element>
+				
+			</xsd:sequence>
+		</xsd:complexType>
+		
+	</xsd:element>
+</xsd:schema>
